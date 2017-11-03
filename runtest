@@ -1,2 +1,1 @@
-docker pull phpunit/phpunit > /dev/null
-docker run -v $(pwd):/app --rm phpunit/phpunit -c phpunit.xml.dist tests/
+docker run -v $(pwd):/app --rm phpunit/phpunit -c phpunit.xml.dist

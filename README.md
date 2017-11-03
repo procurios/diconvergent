@@ -1,9 +1,19 @@
 == (Di|Con)vergent Mob Refactoring ==
 
 === Before we the workshop ===
+
 Please clone this project and run the tests. If you have any issues, do not hesitate to contact us.
 
+* Using Docker:
+ - chmod +x install runtest
+ - ./install
+ - ./runtest
+* Using composer:
+ - composer install
+ - phpunit -c phpunit.xml.dist
+
 === When the workshop begins ===
+
 One of the goals of this workshop is to test your "attitude". Please think about and answer these following questions
 to get a basic understanding. It doesn't have to be perfect and shouldn't take you more than a couple of minutes.
 Please note that "tend to" does not mean one or the other exclusively. Just go with the first choice that comes up for

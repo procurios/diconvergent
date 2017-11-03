@@ -1,0 +1,3 @@
+docker pull composer/composer
+docker pull phpunit/phpunit
+docker run --rm -v $(pwd):/app composer/composer install
