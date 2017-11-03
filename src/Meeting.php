@@ -15,14 +15,8 @@ final class Meeting
     private $description;
     /** @var string */
     private $code;
-    /** @var string */
-    private $startDate;
-    /** @var string */
-    private $endDate;
-    /** @var string */
-    private $startTime;
-    /** @var string */
-    private $endTime;
+    /** @var MeetingDuration */
+    private $duration;
     /** @var bool */
     private $isPublished;
     /** @var string */
@@ -35,45 +29,21 @@ final class Meeting
      * @param string $title
      * @param string $description
      * @param string $code
-     * @param string $startDate
-     * @param string $endDate
-     * @param string $startTime
-     * @param string $endTime
+     * @param MeetingDuration $duration
      * @param bool $isPublished
      * @param string $subTitle
      * @param array $program
      */
-    public function __construct(Uuid $meetingId, string $title, string $description, string $code, string $startDate,
-        string $endDate, string $startTime, string $endTime, bool $isPublished, string $subTitle, array $program) {
+    public function __construct(Uuid $meetingId, string $title, string $description, string $code,
+        MeetingDuration $duration, bool $isPublished, string $subTitle, array $program) {
         $this->meetingId = $meetingId;
         $this->title = $title;
         $this->description = $description;
         $this->code = $code;
-        $this->startDate = $startDate;
-        $this->endDate = $endDate;
-        $this->startTime = $startTime;
-        $this->endTime = $endTime;
+        $this->duration = $duration;
         $this->isPublished = $isPublished;
         $this->subTitle = $subTitle;
         $this->program = $program;
-        $this->meetingsCannotEndBeforeTheyStart();
-    }
-
-    /**
-     * @return void
-     * @throws InvalidDuration
-     */
-    private function meetingsCannotEndBeforeTheyStart(): void
-    {
-        if ($this->endDate > $this->startDate) {
-            return;
-        }
-        if ($this->startDate > $this->endDate) {
-            throw InvalidDuration::becauseEndIsBeforeStart();
-        }
-        if ($this->startTime > $this->endTime) {
-            throw InvalidDuration::becauseEndIsBeforeStart();
-        }
     }
 
     /**
@@ -149,74 +119,20 @@ final class Meeting
     }
 
     /**
-     * @return string
+     * @return MeetingDuration
      */
-    public function getStartDate(): string
+    public function getDuration(): MeetingDuration
     {
-        return $this->startDate;
+        return $this->duration;
     }
 
     /**
-     * @param string $startDate
+     * @param MeetingDuration $duration
      * @return Meeting
      */
-    public function setStartDate(string $startDate): Meeting
+    public function setDuration(MeetingDuration $duration): Meeting
     {
-        $this->startDate = $startDate;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEndDate(): string
-    {
-        return $this->endDate;
-    }
-
-    /**
-     * @param string $endDate
-     * @return Meeting
-     */
-    public function setEndDate(string $endDate): Meeting
-    {
-        $this->endDate = $endDate;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getStartTime(): string
-    {
-        return $this->startTime;
-    }
-
-    /**
-     * @param string $startTime
-     * @return Meeting
-     */
-    public function setStartTime(string $startTime): Meeting
-    {
-        $this->startTime = $startTime;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEndTime(): string
-    {
-        return $this->endTime;
-    }
-
-    /**
-     * @param string $endTime
-     * @return Meeting
-     */
-    public function setEndTime(string $endTime): Meeting
-    {
-        $this->endTime = $endTime;
+        $this->duration = $duration;
         return $this;
     }
 
