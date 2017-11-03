@@ -7,6 +7,7 @@ use DateTimeImmutable;
 use diconvergence\workshop\meeting\InvalidProgram;
 use diconvergence\workshop\meeting\Meeting;
 use diconvergence\workshop\meeting\MeetingDuration;
+use diconvergence\workshop\meeting\Program;
 use Generator;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
@@ -43,7 +44,7 @@ final class ProgramTest extends TestCase
             new MeetingDuration(new DateTimeImmutable('2016-09-29 09:00'), new DateTimeImmutable('2016-09-29 18:00')),
             false,
             'This is a test sub title',
-            [
+            new Program([
                 [
                     'date' => '2016-09-29',
                     'startTime' => '10:00',
@@ -58,7 +59,7 @@ final class ProgramTest extends TestCase
                     'title' => 'Intro OOP',
                     'room' => 'White room',
                 ],
-            ]
+            ])
         );
     }
 
@@ -80,7 +81,7 @@ final class ProgramTest extends TestCase
                 new MeetingDuration(new DateTimeImmutable('2016-09-29 09:00'), new DateTimeImmutable('2016-09-29 18:00')),
                 false,
                 'This is a test sub title',
-                [
+                new Program([
                     [
                         'date' => '2016-09-29',
                         'startTime' => '10:00',
@@ -95,7 +96,7 @@ final class ProgramTest extends TestCase
                         'title' => 'Intro OOP',
                         'room' => 'Black room',
                     ],
-                ]
+                ])
             );
         } catch (InvalidProgram $e) {
             $this->fail($reason);
@@ -129,7 +130,7 @@ final class ProgramTest extends TestCase
                 new MeetingDuration(new DateTimeImmutable('2016-09-29 09:00'), new DateTimeImmutable('2016-09-29 18:00')),
                 false,
                 'This is a test sub title',
-                [
+                new Program([
                     [
                         'date' => '2016-09-29',
                         'startTime' => '10:00',
@@ -144,7 +145,7 @@ final class ProgramTest extends TestCase
                         'title' => 'Intro OOP',
                         'room' => 'White room',
                     ],
-                ]
+                ])
             );
         } catch (InvalidProgram $e) {
             $this->fail($reason);

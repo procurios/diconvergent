@@ -21,7 +21,7 @@ final class Meeting
     private $isPublished;
     /** @var string */
     private $subTitle;
-    /** @var array */
+    /** @var Program */
     private $program;
 
     /**
@@ -32,10 +32,10 @@ final class Meeting
      * @param MeetingDuration $duration
      * @param bool $isPublished
      * @param string $subTitle
-     * @param array $program
+     * @param Program $program
      */
     public function __construct(Uuid $meetingId, string $title, string $description, string $code,
-        MeetingDuration $duration, bool $isPublished, string $subTitle, array $program) {
+        MeetingDuration $duration, bool $isPublished, string $subTitle, Program $program) {
         $this->meetingId = $meetingId;
         $this->title = $title;
         $this->description = $description;
@@ -44,33 +44,6 @@ final class Meeting
         $this->isPublished = $isPublished;
         $this->subTitle = $subTitle;
         $this->program = $program;
-        $this->programSlotsCannotOverlap();
-    }
-
-    /**
-     * @return void
-     */
-    private function programSlotsCannotOverlap(): void
-    {
-        foreach ($this->program as $i => $thisSlot) {
-            foreach (array_slice($this->program, $i + 1) as $thatSlot) {
-                if ($thisSlot['room'] !== $thatSlot['room']) {
-                    continue;
-                }
-                if ($thisSlot['date'] !== $thatSlot['date']) {
-                    continue;
-                }
-                if ($thatSlot['endTime'] > $thisSlot['startTime'] && $thatSlot['endTime'] < $thisSlot['endTime']) {
-                    throw InvalidProgram::becauseSlotsOverlap();
-                }
-                if ($thatSlot['startTime'] > $thisSlot['startTime'] && $thatSlot['startTime'] < $thisSlot['endTime']) {
-                    throw InvalidProgram::becauseSlotsOverlap();
-                }
-                if ($thisSlot['startTime'] >= $thatSlot['startTime'] && $thisSlot['endTime'] <= $thatSlot['endTime']) {
-                    throw InvalidProgram::becauseSlotsOverlap();
-                }
-            }
-        }
     }
 
     /**
@@ -200,18 +173,18 @@ final class Meeting
     }
 
     /**
-     * @return array
+     * @return Program
      */
-    public function getProgram(): array
+    public function getProgram(): Program
     {
         return $this->program;
     }
 
     /**
-     * @param array $program
+     * @param Program $program
      * @return Meeting
      */
-    public function setProgram(array $program): Meeting
+    public function setProgram(Program $program): Meeting
     {
         $this->program = $program;
         return $this;
