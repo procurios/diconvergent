@@ -9,7 +9,7 @@ final class Program
     private $program;
 
     /**
-     * @param array $program
+     * @param ProgramSlot[] $program
      */
     public function __construct(array $program) {
         $this->program = $program;
@@ -23,19 +23,19 @@ final class Program
     {
         foreach ($this->program as $i => $thisSlot) {
             foreach (array_slice($this->program, $i + 1) as $thatSlot) {
-                if ($thisSlot['room'] !== $thatSlot['room']) {
+                if ($thisSlot->getRoom() !== $thatSlot->getRoom()) {
                     continue;
                 }
-                if ($thisSlot['date'] !== $thatSlot['date']) {
+                if ($thisSlot->getDate() !== $thatSlot->getDate()) {
                     continue;
                 }
-                if ($thatSlot['endTime'] > $thisSlot['startTime'] && $thatSlot['endTime'] < $thisSlot['endTime']) {
+                if ($thatSlot->getEndTime() > $thisSlot->getStartTime() && $thatSlot->getEndTime() < $thisSlot->getEndTime()) {
                     throw InvalidProgram::becauseSlotsOverlap();
                 }
-                if ($thatSlot['startTime'] > $thisSlot['startTime'] && $thatSlot['startTime'] < $thisSlot['endTime']) {
+                if ($thatSlot->getStartTime() > $thisSlot->getStartTime() && $thatSlot->getStartTime() < $thisSlot->getEndTime()) {
                     throw InvalidProgram::becauseSlotsOverlap();
                 }
-                if ($thisSlot['startTime'] >= $thatSlot['startTime'] && $thisSlot['endTime'] <= $thatSlot['endTime']) {
+                if ($thisSlot->getStartTime() >= $thatSlot->getStartTime() && $thisSlot->getEndTime() <= $thatSlot->getEndTime()) {
                     throw InvalidProgram::becauseSlotsOverlap();
                 }
             }

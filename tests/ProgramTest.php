@@ -8,6 +8,7 @@ use diconvergence\workshop\meeting\InvalidProgram;
 use diconvergence\workshop\meeting\Meeting;
 use diconvergence\workshop\meeting\MeetingDuration;
 use diconvergence\workshop\meeting\Program;
+use diconvergence\workshop\meeting\ProgramSlot;
 use Generator;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
@@ -45,20 +46,8 @@ final class ProgramTest extends TestCase
             false,
             'This is a test sub title',
             new Program([
-                [
-                    'date' => '2016-09-29',
-                    'startTime' => '10:00',
-                    'endTime' => '11:00',
-                    'title' => 'Opening',
-                    'room' => 'White room',
-                ],
-                [
-                    'date' => '2016-09-29',
-                    'startTime' => $startTime,
-                    'endTime' => $endTime,
-                    'title' => 'Intro OOP',
-                    'room' => 'White room',
-                ],
+                new ProgramSlot('2016-09-29', '10:00', '11:00', 'Opening', 'White room'),
+                new ProgramSlot('2016-09-29', $startTime, $endTime, 'Intro OOP', 'White room'),
             ])
         );
     }
@@ -82,20 +71,8 @@ final class ProgramTest extends TestCase
                 false,
                 'This is a test sub title',
                 new Program([
-                    [
-                        'date' => '2016-09-29',
-                        'startTime' => '10:00',
-                        'endTime' => '11:00',
-                        'title' => 'Opening',
-                        'room' => 'White room',
-                    ],
-                    [
-                        'date' => '2016-09-29',
-                        'startTime' => $startTime,
-                        'endTime' => $endTime,
-                        'title' => 'Intro OOP',
-                        'room' => 'Black room',
-                    ],
+                    new ProgramSlot('2016-09-29', '10:00', '11:00', 'Opening', 'White room'),
+                    new ProgramSlot('2016-09-29', $startTime, $endTime, 'Intro OOP', 'Black room'),
                 ])
             );
         } catch (InvalidProgram $e) {
@@ -131,20 +108,8 @@ final class ProgramTest extends TestCase
                 false,
                 'This is a test sub title',
                 new Program([
-                    [
-                        'date' => '2016-09-29',
-                        'startTime' => '10:00',
-                        'endTime' => '11:00',
-                        'title' => 'Opening',
-                        'room' => 'White room',
-                    ],
-                    [
-                        'date' => '2016-09-29',
-                        'startTime' => $startTime,
-                        'endTime' => $endTime,
-                        'title' => 'Intro OOP',
-                        'room' => 'White room',
-                    ],
+                    new ProgramSlot('2016-09-29', '10:00', '11:00', 'Opening', 'White room'),
+                    new ProgramSlot('2016-09-29', $startTime, $endTime, 'Intro OOP', 'White room'),
                 ])
             );
         } catch (InvalidProgram $e) {
