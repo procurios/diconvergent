@@ -1,6 +1,14 @@
-== (Di|Con)vergent Mob Refactoring ==
+# (Di|Con)vergent Mob Refactoring
 
-=== Before we the workshop ===
+## Before the workshop
+
+We have little time and lot's to do. Please take the time to prepare beforehand, so we can all get the most out of the
+workshop. If there are any issues or comments please contact us on Twitter or mail:
+
+* Joop Lammerts, joop@procurios.eu, @jlammerts
+* Pim Elshoff, pim@procurios.eu, @pelshoff
+
+### Installation
 
 Please clone this project and run the tests. If you have any issues, do not hesitate to contact us.
 
@@ -12,10 +20,10 @@ Please clone this project and run the tests. If you have any issues, do not hesi
  - composer install
  - phpunit -c phpunit.xml.dist
 
-=== When the workshop begins ===
+### Preparation
 
-One of the goals of this workshop is to test your "attitude". Please think about and answer these following questions
-to get a basic understanding. It doesn't have to be perfect and shouldn't take you more than a couple of minutes.
+One of the goals of this workshop is to test your **attitude**. Please think about and answer these following questions
+to get a basic understanding. It doesn't have to be perfect and shouldn't take more than a couple of minutes.
 Please note that "tend to" does not mean one or the other exclusively. Just go with the first choice that comes up for
 you.
 
@@ -29,10 +37,19 @@ you.
  - Uhuh
  - Yes
 
-=== During the workshop ===
-We will divide you up into teams of four and hand out your assignments. While it's ok with us if you decide to do
-diverge from our suggestion, we suggest to work on the problems in four rounds of ten minutes. Each round one of you
-codes, or "drives", while the others assist, or "navigate".
+The more questions you have answered with the first answer, the more we think you tend to pessimism. In short we think
+this means you tend to converge easier than diverge and that you tend to push on the brakes more than the gas.
+
+The more questions have have answered with the second answer, the more we think you tend towards optimism. In short we
+think this means you tend to diverge easier than converge and that you tend to push on the gas more than the brakes.
+
+## During the workshop
+
+We will divide you up into teams of four and hand out your assignments, preferable mixed nicely between optimists and
+pessimists. While it's ok with us if you decide to do diverge from our suggestion, we suggest to work on the problems
+in four rounds of ten minutes. Each round one of you codes, or "drives", while the others assist, or "navigate".
+
+### The first hour
 
 During the first hour, the goal is to diverge and explore. The script for drivers is as follows:
 
@@ -45,6 +62,8 @@ The script for navigators is as follows:
 - Hush; do not interrupt or distract the driver
 - Share ideas between navigators using the provided post-its
 - You may only interrupt the driver by softly saying "emergency break!"
+
+### The second hour
 
 During the second hour, the goal is to converge and choose. The script for drivers is as follows:
 
