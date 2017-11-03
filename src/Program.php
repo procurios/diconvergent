@@ -5,11 +5,12 @@ namespace diconvergence\workshop\meeting;
 
 final class Program
 {
-    /** @var array */
+    /** @var ProgramSlot[] */
     private $program;
 
     /**
      * @param ProgramSlot[] $program
+     * @throws InvalidProgram
      */
     public function __construct(array $program) {
         $this->program = $program;
@@ -18,24 +19,13 @@ final class Program
 
     /**
      * @return void
+     * @throws InvalidProgram
      */
     private function programSlotsCannotOverlap(): void
     {
         foreach ($this->program as $i => $thisSlot) {
             foreach (array_slice($this->program, $i + 1) as $thatSlot) {
-                if ($thisSlot->getRoom() !== $thatSlot->getRoom()) {
-                    continue;
-                }
-                if ($thisSlot->getDate() !== $thatSlot->getDate()) {
-                    continue;
-                }
-                if ($thatSlot->getEndTime() > $thisSlot->getStartTime() && $thatSlot->getEndTime() < $thisSlot->getEndTime()) {
-                    throw InvalidProgram::becauseSlotsOverlap();
-                }
-                if ($thatSlot->getStartTime() > $thisSlot->getStartTime() && $thatSlot->getStartTime() < $thisSlot->getEndTime()) {
-                    throw InvalidProgram::becauseSlotsOverlap();
-                }
-                if ($thisSlot->getStartTime() >= $thatSlot->getStartTime() && $thisSlot->getEndTime() <= $thatSlot->getEndTime()) {
+                if ($thisSlot->overlapsWith($thatSlot)) {
                     throw InvalidProgram::becauseSlotsOverlap();
                 }
             }

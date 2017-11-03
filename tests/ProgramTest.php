@@ -9,6 +9,7 @@ use diconvergence\workshop\meeting\Meeting;
 use diconvergence\workshop\meeting\MeetingDuration;
 use diconvergence\workshop\meeting\Program;
 use diconvergence\workshop\meeting\ProgramSlot;
+use diconvergence\workshop\meeting\ProgramSlotDuration;
 use Generator;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
@@ -46,8 +47,16 @@ final class ProgramTest extends TestCase
             false,
             'This is a test sub title',
             new Program([
-                new ProgramSlot('2016-09-29', '10:00', '11:00', 'Opening', 'White room'),
-                new ProgramSlot('2016-09-29', $startTime, $endTime, 'Intro OOP', 'White room'),
+                new ProgramSlot(
+                    new ProgramSlotDuration(
+                        new DateTimeImmutable('2016-09-29 10:00'),
+                        new DateTimeImmutable('2016-09-29 11:00')
+                    ),'Opening', 'White room'),
+                new ProgramSlot(
+                    new ProgramSlotDuration(
+                        new DateTimeImmutable("2016-09-29 $startTime"),
+                        new DateTimeImmutable("2016-09-29 $endTime")
+                ), 'Intro OOP', 'White room'),
             ])
         );
     }
@@ -71,8 +80,16 @@ final class ProgramTest extends TestCase
                 false,
                 'This is a test sub title',
                 new Program([
-                    new ProgramSlot('2016-09-29', '10:00', '11:00', 'Opening', 'White room'),
-                    new ProgramSlot('2016-09-29', $startTime, $endTime, 'Intro OOP', 'Black room'),
+                    new ProgramSlot(
+                        new ProgramSlotDuration(
+                            new DateTimeImmutable('2016-09-29 10:00'),
+                            new DateTimeImmutable('2016-09-29 11:00')
+                        ), 'Opening', 'White room'),
+                    new ProgramSlot(
+                        new ProgramSlotDuration(
+                            new DateTimeImmutable("2016-09-29 $startTime"),
+                            new DateTimeImmutable("2016-09-29 $endTime")
+                        ), 'Intro OOP', 'Black room'),
                 ])
             );
         } catch (InvalidProgram $e) {
@@ -108,8 +125,16 @@ final class ProgramTest extends TestCase
                 false,
                 'This is a test sub title',
                 new Program([
-                    new ProgramSlot('2016-09-29', '10:00', '11:00', 'Opening', 'White room'),
-                    new ProgramSlot('2016-09-29', $startTime, $endTime, 'Intro OOP', 'White room'),
+                    new ProgramSlot(
+                        new ProgramSlotDuration(
+                            new DateTimeImmutable('2016-09-29 10:00'),
+                            new DateTimeImmutable('2016-09-29 11:00')
+                        ), 'Opening', 'White room'),
+                    new ProgramSlot(
+                        new ProgramSlotDuration(
+                            new DateTimeImmutable("2016-09-29 $startTime"),
+                            new DateTimeImmutable("2016-09-29 $endTime")
+                        ), 'Intro OOP', 'White room'),
                 ])
             );
         } catch (InvalidProgram $e) {

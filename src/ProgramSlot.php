@@ -5,55 +5,41 @@ namespace diconvergence\workshop\meeting;
 
 final class ProgramSlot
 {
-    /** @var string */
-    private $date;
-    /** @var string */
-    private $startTime;
-    /** @var string */
-    private $endTime;
+    /** @var ProgramSlotDuration */
+    private $duration;
     /** @var string */
     private $title;
     /** @var string */
     private $room;
 
     /**
-     * @param string $date
-     * @param string $startTime
-     * @param string $endTime
+     * @param ProgramSlotDuration $duration
      * @param string $title
      * @param string $room
      */
-    public function __construct(string $date, string $startTime, string $endTime, string $title, string $room)
+    public function __construct(ProgramSlotDuration $duration, string $title, string $room)
     {
-        $this->date = $date;
-        $this->startTime = $startTime;
-        $this->endTime = $endTime;
+        $this->duration = $duration;
         $this->title = $title;
         $this->room = $room;
     }
 
     /**
-     * @return string
+     * @param ProgramSlot $that
+     * @return bool
      */
-    public function getDate(): string
+    public function overlapsWith(ProgramSlot $that): bool
     {
-        return $this->date;
+        return $this->room === $that->room
+            && $this->duration->overlapsWith($that->duration);
     }
 
     /**
-     * @return string
+     * @return ProgramSlotDuration
      */
-    public function getStartTime(): string
+    public function getDuration(): ProgramSlotDuration
     {
-        return $this->startTime;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEndTime(): string
-    {
-        return $this->endTime;
+        return $this->duration;
     }
 
     /**
