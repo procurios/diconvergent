@@ -23,29 +23,7 @@ final class DurationTest extends TestCase
             new MeetingDuration(new DateTimeImmutable('2016-09-29 09:00'), new DateTimeImmutable('2016-09-29 08:00')),
             false,
             'This is a test sub title',
-            [
-                [
-                    'date' => '2016-09-29',
-                    'startTime' => '09:00',
-                    'endTime' => '09:30',
-                    'title' => 'Opening',
-                    'room' => 'White room',
-                ],
-                [
-                    'date' => '2016-09-29',
-                    'startTime' => '09:30',
-                    'endTime' => '10:30',
-                    'title' => 'Intro OOP',
-                    'room' => 'Black room',
-                ],
-                [
-                    'date' => '2016-09-29',
-                    'startTime' => '09:30',
-                    'endTime' => '10:00',
-                    'title' => 'Intro FP',
-                    'room' => 'White room',
-                ],
-            ]
+            []
         );
     }
 }
