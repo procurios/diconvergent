@@ -45,11 +45,19 @@ think this means you tend to diverge easier than converge and that you tend to p
 
 ## During the workshop
 
-We will divide you up into teams of four and hand out your assignments, preferable mixed nicely between optimists and
-pessimists. While it's ok with us if you decide to do diverge from our suggestion, we suggest to work on the problems
-in four rounds of ten minutes. Each round one of you codes, or "drives", while the others assist, or "navigate".
+We will divide you up into teams of four and hand out your assignments, preferably mixed nicely between optimists and
+pessimists.
+
+### Rules
+
+- Be kind, considerate and respectful
+- Listen; allow your peers space and time
+- No one is required to "drive"/type
 
 ### The first hour
+
+While it's ok with us if you decide to diverge from our suggestion, we suggest to work on the problems in four rounds
+of ten minutes. Each round one of you codes, or "drives", while the others assist, or "navigate".
 
 During the first hour, the goal is to diverge and explore. The script for drivers is as follows:
 
@@ -65,10 +73,15 @@ The script for navigators is as follows:
 
 ### The second hour
 
+The second hour will be a little bit different. There will still be only one driver, but this time the driver is only
+allowed to type, not talk. If you have an idea that you'd like to be entered into code, you must give up the keyboard
+and talk someone else through coding it. We suggest to switch driver at least once every 5 minutes, but encourage
+switching more often.
+
 During the second hour, the goal is to converge and choose. The script for drivers is as follows:
 
-- Talk
 - Code
+- Request to navigate if you want to choose
 
 The script for navigators is as follows:
 
