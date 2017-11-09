@@ -1,1 +1,1 @@
-docker run -v $(pwd):/app --rm phpunit/phpunit -c phpunit.xml.dist
+docker run -it --rm --name diconvergence -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.1-cli vendor/phpunit/phpunit/phpunit -c phpunit.xml.dist
