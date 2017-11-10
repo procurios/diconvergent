@@ -33,9 +33,9 @@ you.
 * At the start of a new project, I tend to
  - Think big and work out the general picture
  - Work out some details and start coding to get a better understanding
-* Etc.
- - Uhuh
- - Yes
+* I can easily talk and type at the same time
+ - disagree
+ - agree
 
 The more questions you have answered with the first answer, the more we think you tend to pessimism. In short we think
 this means you tend to converge easier than diverge and that you tend to push on the brakes more than the gas.
@@ -74,7 +74,7 @@ The script for navigators is as follows:
 ### The second hour
 
 The second hour will be a little bit different. There will still be only one driver, but this time the driver is only
-allowed to type, not talk. If you have an idea that you'd like to be entered into code, you must give up the keyboard
+allowed to type, not talk. If you have an idea that you'd like to be entered into code, *you must give up the keyboard*
 and talk someone else through coding it. We suggest to switch driver at least once every 5 minutes, but encourage
 switching more often.
 
