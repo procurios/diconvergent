@@ -18,7 +18,7 @@ Please clone this project and run the tests. If you have any issues, do not hesi
  - ./runtest
 * Using composer:
  - composer install
- - phpunit -c phpunit.xml.dist
+ - vendor/bin/phpunit -c phpunit.xml.dist
 
 ### Preparation
 
