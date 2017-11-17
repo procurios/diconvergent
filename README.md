@@ -13,12 +13,12 @@ workshop. If there are any issues or comments please contact us on Twitter or ma
 Please clone this project and run the tests. If you have any issues, do not hesitate to contact us.
 
 * Using Docker: (You need to sudo if your user is not part of dockerusers)
- - chmod +x install runtest
- - ./install
- - ./runtest
+  - chmod +x install runtest
+  - ./install
+  - ./runtest
 * Using composer:
- - composer install
- - vendor/bin/phpunit -c phpunit.xml.dist
+  - composer install
+  - vendor/bin/phpunit -c phpunit.xml.dist
 
 ### Preparation
 
@@ -28,20 +28,20 @@ Please note that "tend to" does not mean one or the other exclusively. Just go w
 you.
 
 * At the start of a new project, I tend to
- - Think big and work out the general picture
- - Work out some details and start coding to get a better understanding
+  - Think big and work out the general picture
+  - Work out some details and start coding to get a better understanding
 * While coding...
- - I only start coding when I see the bigger picture
- - I regularly throw code away and start over
+  - I only start coding when I see the bigger picture
+  - I regularly throw code away and start over
 * I can easily talk and type at the same time
- - disagree
- - agree
+  - disagree
+  - agree
 * When someone shares an idea with me, I tend to
- - See potential problems and risks
- - Get ideas of my own
+  - See potential problems and risks
+  - Get ideas of my own
 * When I face an obstacle I tend to
- - sit down and get to the bottom of it
- - park it and work on something else for a bit
+  - sit down and get to the bottom of it
+  - park it and work on something else for a bit
 
 The more questions you have answered with the first answer, the more we think you tend to pessimism. In short we think
 this means you tend to converge easier than diverge and that you tend to push on the brakes more than the gas.
