@@ -18,18 +18,18 @@ final class MeetingTest extends TestCase
             Uuid::uuid4(),
             '(Di|con)vergent mob refactoring',
             'This is a silly workshop, don\'t come',
-            new DateTimeImmutable('2017-11-21 19:00'),
-            new DateTimeImmutable('2017-11-21 21:00'),
+            new DateTimeImmutable('2017-12-15 19:00'),
+            new DateTimeImmutable('2017-12-15 21:00'),
             new Program([
                 new ProgramSlot(
-                    new DateTimeImmutable('2017-11-21 19:00'),
-                    new DateTimeImmutable('2017-11-21 20:00'),
+                    new DateTimeImmutable('2017-12-15 19:00'),
+                    new DateTimeImmutable('2017-12-15 20:00'),
                     'Divergence',
                     'Main room'
                 ),
                 new ProgramSlot(
-                    new DateTimeImmutable('2017-11-21 20:00'),
-                    new DateTimeImmutable('2017-11-21 21:00'),
+                    new DateTimeImmutable('2017-12-15 20:00'),
+                    new DateTimeImmutable('2017-12-15 21:00'),
                     'Convergence',
                     'Main room'
                 ),
