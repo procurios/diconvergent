@@ -12,7 +12,7 @@ use Ramsey\Uuid\Uuid;
 
 final class MeetingTest extends TestCase
 {
-    public function testThatValidMeetingsCanBeInstantiated(): void
+    public function testThatValidMeetingsCanBeInstantiated()
     {
         $this->assertInstanceOf(Meeting::class, new Meeting(
             Uuid::uuid4(),
