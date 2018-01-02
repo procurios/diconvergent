@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace diconvergence\workshop\meeting;
+namespace meetinc;
 
 use DateTimeImmutable;
 use Ramsey\Uuid\UuidInterface;

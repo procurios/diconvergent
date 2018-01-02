@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace diconvergence\workshop\meeting\test;
 
 use DateTimeImmutable;
-use diconvergence\workshop\meeting\Meeting;
-use diconvergence\workshop\meeting\Program;
-use diconvergence\workshop\meeting\ProgramSlot;
+use meetinc\Meeting;
+use meetinc\Program;
+use meetinc\ProgramSlot;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
 
