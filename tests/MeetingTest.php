@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace diconvergence\workshop\meeting\test;
+namespace Diconvergent\Meeting\test;
 
 use DateTimeImmutable;
-use meetinc\Meeting;
-use meetinc\Program;
-use meetinc\ProgramSlot;
+use Diconvergent\Meeting\Meeting;
+use Diconvergent\Meeting\Program;
+use Diconvergent\Meeting\ProgramSlot;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
 

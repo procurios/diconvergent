@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace meetinc;
+namespace Diconvergent\Meeting;
 
 use DateTimeImmutable;
 
