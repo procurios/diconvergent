@@ -1,5 +1,7 @@
 # (Di|Con)vergent Mob Refactoring
 
+For the C# version: https://github.com/procurios/diconvergent-csharp
+
 ## Before the workshop
 
 We have little time and lot's to do. Please take the time to prepare beforehand, so we can all get the most out of the
