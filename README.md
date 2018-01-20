@@ -1,6 +1,7 @@
 # (Di|Con)vergent Mob Refactoring
 
-For the C# version: https://github.com/procurios/diconvergent-csharp
+* For the C# version: https://github.com/procurios/diconvergent-csharp
+* For the java version: https://github.com/procurios/diconvergent-java
 
 ## Before the workshop
 
