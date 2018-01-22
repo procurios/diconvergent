@@ -2,6 +2,7 @@
 
 * For the C# version: https://github.com/procurios/diconvergent-csharp
 * For the java version: https://github.com/procurios/diconvergent-java
+* For the nodejs version: https://github.com/andrewwolters/diconvergent-nodejs (Thanks to [@andrewwolters](https://twitter.com/andrewwolters))
 
 ## Before the workshop
 
