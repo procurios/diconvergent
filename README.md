@@ -1,6 +1,7 @@
 # (Di|Con)vergent Mob Refactoring
 
 * For the C# version: https://github.com/procurios/diconvergent-csharp
+* For the C# dotnet core version: https://github.com/koenmetsu/diconvergent-dotnet-core
 * For the java version: https://github.com/procurios/diconvergent-java
 * For the nodejs version: https://github.com/andrewwolters/diconvergent-nodejs (Thanks to [@andrewwolters](https://twitter.com/andrewwolters))
 
